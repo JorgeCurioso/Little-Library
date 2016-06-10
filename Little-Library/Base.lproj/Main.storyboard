@@ -8,7 +8,7 @@
         <!--Library-->
         <scene sceneID="OeU-3b-Fbe">
             <objects>
-                <viewController title="Library" id="qpE-Ie-TZZ" sceneMemberID="viewController">
+                <viewController title="Library" id="qpE-Ie-TZZ" customClass="LibraryViewController" customModule="Little_Library" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DcZ-3o-AwQ"/>
                         <viewControllerLayoutGuide type="bottom" id="YxX-Eo-WJv"/>
@@ -16,9 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="Mfj-xe-Hcy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jaK-9S-Ewi">
+                                <rect key="frame" x="20" y="145" width="560" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryCell" textLabel="GBQ-Ke-aAg" style="IBUITableViewCellStyleDefault" id="H3O-C1-VRL">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H3O-C1-VRL" id="TSy-BE-5QJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GBQ-Ke-aAg">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qpE-Ie-TZZ" id="wVL-C5-w68"/>
+                                    <outlet property="delegate" destination="qpE-Ie-TZZ" id="LCP-nw-ESv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jaK-9S-Ewi" firstAttribute="top" secondItem="DcZ-3o-AwQ" secondAttribute="bottom" constant="125" id="Db6-Jd-CNw"/>
+                            <constraint firstItem="YxX-Eo-WJv" firstAttribute="top" secondItem="jaK-9S-Ewi" secondAttribute="bottom" id="EM1-J0-zkG"/>
+                            <constraint firstItem="jaK-9S-Ewi" firstAttribute="leading" secondItem="Mfj-xe-Hcy" secondAttribute="leading" constant="20" id="PoI-ij-X2q"/>
+                            <constraint firstAttribute="trailing" secondItem="jaK-9S-Ewi" secondAttribute="trailing" constant="20" id="wb2-Li-9za"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="cgV-n8-Z3C"/>
+                    <connections>
+                        <outlet property="libraryTableView" destination="jaK-9S-Ewi" id="i37-NG-cyq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhm-EN-IKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
