@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0CD7FEE56EC3F8F26E1037B1 /* Pods_Little_LibraryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3507878E76BF4546E049BF8C /* Pods_Little_LibraryUITests.framework */; };
+		2310AF591D050402000449ED /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF581D050402000449ED /* ScanViewController.swift */; };
+		2310AF5A1D050402000449ED /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF581D050402000449ED /* ScanViewController.swift */; };
+		2310AF5B1D050402000449ED /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF581D050402000449ED /* ScanViewController.swift */; };
+		2310AF5D1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */; };
+		2310AF5E1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */; };
+		2310AF5F1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */; };
+		2310AF611D051892000449ED /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF601D051892000449ED /* UIViewControllerExtensions.swift */; };
+		2310AF621D051892000449ED /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF601D051892000449ED /* UIViewControllerExtensions.swift */; };
+		2310AF631D051892000449ED /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310AF601D051892000449ED /* UIViewControllerExtensions.swift */; };
 		2327BEBE1D027AB30011A359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327BEBD1D027AB30011A359 /* AppDelegate.swift */; };
-		2327BEC01D027AB30011A359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327BEBF1D027AB30011A359 /* ViewController.swift */; };
 		2327BEC31D027AB30011A359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2327BEC11D027AB30011A359 /* Main.storyboard */; };
 		2327BEC61D027AB30011A359 /* Little_Library.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2327BEC41D027AB30011A359 /* Little_Library.xcdatamodeld */; };
 		2327BEC81D027AB30011A359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2327BEC71D027AB30011A359 /* Assets.xcassets */; };
@@ -41,9 +49,11 @@
 		00DC23131CA27FEF9A7EFF5A /* Pods-Little-LibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Little-LibraryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Little-LibraryTests/Pods-Little-LibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0622B6E4B867C0EEDA65BAC0 /* Pods-Little-LibraryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Little-LibraryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Little-LibraryUITests/Pods-Little-LibraryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		07D8DE6B5985A59766E43405 /* Pods-Little-Library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Little-Library.release.xcconfig"; path = "Pods/Target Support Files/Pods-Little-Library/Pods-Little-Library.release.xcconfig"; sourceTree = "<group>"; };
+		2310AF581D050402000449ED /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		2310AF601D051892000449ED /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2327BEBA1D027AB30011A359 /* Little-Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little-Library.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2327BEBD1D027AB30011A359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2327BEBF1D027AB30011A359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2327BEC21D027AB30011A359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2327BEC51D027AB30011A359 /* Little_Library.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Little_Library.xcdatamodel; sourceTree = "<group>"; };
 		2327BEC71D027AB30011A359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,12 +137,14 @@
 			isa = PBXGroup;
 			children = (
 				2327BEBD1D027AB30011A359 /* AppDelegate.swift */,
-				2327BEBF1D027AB30011A359 /* ViewController.swift */,
+				2310AF581D050402000449ED /* ScanViewController.swift */,
 				2327BEC11D027AB30011A359 /* Main.storyboard */,
 				2327BEC71D027AB30011A359 /* Assets.xcassets */,
 				2327BEC91D027AB30011A359 /* LaunchScreen.storyboard */,
 				2327BECC1D027AB30011A359 /* Info.plist */,
 				2327BEC41D027AB30011A359 /* Little_Library.xcdatamodeld */,
+				2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */,
+				2310AF601D051892000449ED /* UIViewControllerExtensions.swift */,
 			);
 			path = "Little-Library";
 			sourceTree = "<group>";
@@ -430,9 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2327BEC01D027AB30011A359 /* ViewController.swift in Sources */,
 				2327BEC61D027AB30011A359 /* Little_Library.xcdatamodeld in Sources */,
 				2327BEBE1D027AB30011A359 /* AppDelegate.swift in Sources */,
+				2310AF611D051892000449ED /* UIViewControllerExtensions.swift in Sources */,
+				2310AF5D1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */,
+				2310AF591D050402000449ED /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2310AF621D051892000449ED /* UIViewControllerExtensions.swift in Sources */,
 				2327BED61D027AB30011A359 /* Little_LibraryTests.swift in Sources */,
+				2310AF5E1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */,
+				2310AF5A1D050402000449ED /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +465,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2310AF631D051892000449ED /* UIViewControllerExtensions.swift in Sources */,
 				2327BEE11D027AB30011A359 /* Little_LibraryUITests.swift in Sources */,
+				2310AF5F1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */,
+				2310AF5B1D050402000449ED /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
