@@ -26,6 +26,8 @@
 		2327BEE11D027AB30011A359 /* Little_LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327BEE01D027AB30011A359 /* Little_LibraryUITests.swift */; };
 		236C4DF61D0A61390056FDD4 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C4DF51D0A61390056FDD4 /* LibraryViewController.swift */; };
 		236C4DF81D0A63AB0056FDD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C4DF71D0A63AB0056FDD4 /* SearchViewController.swift */; };
+		239C82AD1D1F41B600229FD9 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239C82AC1D1F41B600229FD9 /* Book.swift */; };
+		239C82AF1D1F41D800229FD9 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239C82AE1D1F41D800229FD9 /* Library.swift */; };
 		25B5A80E5A632212775D9FC7 /* Pods_Little_LibraryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F043EFE34060EC918F8CEA65 /* Pods_Little_LibraryTests.framework */; };
 		843CC66CF808CFDA2984D80A /* Pods_Little_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E384E413DE20785DAF782EDF /* Pods_Little_Library.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		2327BEE21D027AB30011A359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236C4DF51D0A61390056FDD4 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		236C4DF71D0A63AB0056FDD4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		239C82AC1D1F41B600229FD9 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		239C82AE1D1F41D800229FD9 /* Library.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		3507878E76BF4546E049BF8C /* Pods_Little_LibraryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Little_LibraryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A21385D003C416A0C216CC /* Pods-Little-LibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Little-LibraryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Little-LibraryTests/Pods-Little-LibraryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E384E413DE20785DAF782EDF /* Pods_Little_Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Little_Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,16 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				2327BEBD1D027AB30011A359 /* AppDelegate.swift */,
-				2310AF581D050402000449ED /* ScanViewController.swift */,
 				2327BEC11D027AB30011A359 /* Main.storyboard */,
-				2327BEC71D027AB30011A359 /* Assets.xcassets */,
-				2327BEC91D027AB30011A359 /* LaunchScreen.storyboard */,
-				2327BECC1D027AB30011A359 /* Info.plist */,
-				2327BEC41D027AB30011A359 /* Little_Library.xcdatamodeld */,
+				239C82B11D1F41F600229FD9 /* Supporting Files */,
 				2310AF5C1D050ED7000449ED /* UIAlertControllerExtensions.swift */,
 				2310AF601D051892000449ED /* UIViewControllerExtensions.swift */,
-				236C4DF51D0A61390056FDD4 /* LibraryViewController.swift */,
-				236C4DF71D0A63AB0056FDD4 /* SearchViewController.swift */,
+				239C82B21D1F421400229FD9 /* ViewControllers */,
+				239C82B01D1F41E400229FD9 /* Models */,
 			);
 			path = "Little-Library";
 			sourceTree = "<group>";
@@ -171,6 +171,36 @@
 				2327BEE21D027AB30011A359 /* Info.plist */,
 			);
 			path = "Little-LibraryUITests";
+			sourceTree = "<group>";
+		};
+		239C82B01D1F41E400229FD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				239C82AC1D1F41B600229FD9 /* Book.swift */,
+				239C82AE1D1F41D800229FD9 /* Library.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		239C82B11D1F41F600229FD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2327BEC71D027AB30011A359 /* Assets.xcassets */,
+				2327BEC91D027AB30011A359 /* LaunchScreen.storyboard */,
+				2327BECC1D027AB30011A359 /* Info.plist */,
+				2327BEC41D027AB30011A359 /* Little_Library.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		239C82B21D1F421400229FD9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				236C4DF51D0A61390056FDD4 /* LibraryViewController.swift */,
+				236C4DF71D0A63AB0056FDD4 /* SearchViewController.swift */,
+				2310AF581D050402000449ED /* ScanViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8338914D7FED2A30578E6534 /* Pods */ = {
@@ -448,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239C82AD1D1F41B600229FD9 /* Book.swift in Sources */,
 				2327BEC61D027AB30011A359 /* Little_Library.xcdatamodeld in Sources */,
 				236C4DF81D0A63AB0056FDD4 /* SearchViewController.swift in Sources */,
 				2327BEBE1D027AB30011A359 /* AppDelegate.swift in Sources */,
@@ -455,6 +486,7 @@
 				2310AF5D1D050ED7000449ED /* UIAlertControllerExtensions.swift in Sources */,
 				236C4DF61D0A61390056FDD4 /* LibraryViewController.swift in Sources */,
 				2310AF591D050402000449ED /* ScanViewController.swift in Sources */,
+				239C82AF1D1F41D800229FD9 /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
