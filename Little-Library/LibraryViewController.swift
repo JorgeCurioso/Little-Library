@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 class LibraryViewController: UIViewController {
     
     @IBOutlet weak var libraryTableView: UITableView!
     
+    private var library = Library.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
+    
+    override func viewWillAppear(animated: Bool) {
+        libraryTableView.reloadData()
+    }
     
 }
 
@@ -27,15 +32,21 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDataSource  {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return library.books.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("libraryCell", forIndexPath: indexPath)
-
-        cell.textLabel!.text = "a book goes here"
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "libraryCell")
+        let book = library.books[indexPath.row]
+        
+        cell.textLabel!.text = book.title
+        cell.detailTextLabel?.text = book.author
+        cell.imageView?.pin_setImageFromURL(book.imageUrl,
+                                            placeholderImage: UIImage(named: "coverNotAvailable.jpeg"))
         
         return cell
+        
+
     }
 }
 
